@@ -34,7 +34,7 @@ const UserStats = () => {
   }, [task]);
 
   return (
-    <div className="p-6 w-full md:w-[40%] mt-1 mb-4 text-white bg-purple-900 rounded-lg shadow">
+    <div className="p-6 w-[80%] md:w-[40%] mt-1 mb-4 text-white bg-purple-900 rounded-lg shadow">
       <h1 className="md:text-2xl font-bold mb-6">User Task Statistics</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
