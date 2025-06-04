@@ -20,7 +20,7 @@ const Dashboard = () => {
      <div className='flex items-center justify-end  md:w-[40%]'>
      <div className="mt-2">
         <label htmlFor="filter" className="mr-4 text-lg">Filter Tasks:</label>
-         <select id="filter" value={filter} onChange={(e) => setFilter(e.target.value)} className="bg-white text-white p-2 rounded border border-purple-500 outline:none text-black">
+         <select id="filter" value={filter} onChange={(e) => setFilter(e.target.value)} className="bg-white  p-2 rounded border border-purple-500 outline:none text-black">
           <option value="All">All</option>
           <option value="Low">Low Priority</option>
           <option value="Medium">Medium Priority</option>
