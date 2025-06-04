@@ -4,6 +4,8 @@ import axios from 'axios'
 // creating the context
 export const TaskContext = createContext();
 
+const API_BASE = "https://task-manager-backend-lyt7.onrender.com/";
+
 
 // create contextprovider
 export const TaskContextProvider = ({children}) => {
@@ -17,26 +19,26 @@ export const TaskContextProvider = ({children}) => {
 
     // fetch task for user
     const fetchTasks = async() => {
-        const res = await axios.get('/api/task/gettask',config);
+        const res = await axios.get(`${API_BASE}/api/task/gettask`,config);
         setTask(res.data);
     }
 
     // create task for user
     const createTask = async(taskdata) => {
-        await axios.post('/api/task/createtask',taskdata,config);
+        await axios.post(`${API_BASE}/api/task/createtask`,taskdata,config);
 
         fetchTasks();
     }
 
     // delete task for user
     const deleteTask = async(id) => {
-        await axios.delete(`/api/task/deletetask/${id}`,config);
+        await axios.delete(`${API_BASE}/api/task/deletetask/${id}`,config);
         fetchTasks();
     }
 
     // update task for user
     const updateTask = async(id,taskdata) => {
-        await axios.put(`/api/task/updatetask/${id}`,taskdata,config);
+        await axios.put(`${API_BASE}/api/task/updatetask/${id}`,taskdata,config);
         fetchTasks();
     }
 
