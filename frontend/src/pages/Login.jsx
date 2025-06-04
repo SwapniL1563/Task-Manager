@@ -3,6 +3,8 @@ import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TaskContext } from '../context/Taskcontext';
 
+const API_BASE = "https://task-manager-backend-lyt7.onrender.com";
+
 const Signin = () => {
   const [form, setForm] = useState({ email: '', password: '' });
   const navigate = useNavigate();
@@ -12,7 +14,7 @@ const Signin = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("/api/auth/signin", form);
+      const res = await axios.post(`${API_BASE}/api/auth/signin`, form);
       console.log("LOGIN RESPONSE", res);
       const token = res.data.token;
 

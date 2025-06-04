@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
+const API_BASE = "https://task-manager-backend-lyt7.onrender.com";
+
 const Signup = () => {
 
   const [form,setForm] = useState({email:'',password:'',username:''});
@@ -9,7 +11,7 @@ const Signup = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    axios.post("/api/auth/signup",form)
+    axios.post(`${API_BASE}/api/auth/signup`,form)
     navigate("/signin");
   }
 
