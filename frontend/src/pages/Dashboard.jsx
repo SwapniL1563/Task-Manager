@@ -9,7 +9,7 @@ const Dashboard = () => {
   const [filter, setFilter] = useState('All');
   return (
     <div className="min-h-screen bg-purple-100 flex flex-col  items-center p-6">
-    <div className='flex justify-between gap-2 md:w-[40%] items-center '>
+    <div className='flex justify-between gap-4 md:gap-2 md:w-[40%] items-center '>
     <h1 className="text-lg md:text-2xl font-bold text-purple-800 ">Welcome to Dashboard</h1>
     <button type="button" onClick={() => navigate("/signin")} className="bg-purple-600 text-white py-1 px-2 md:py-2 md:px-3 rounded-md hover:bg-purple-700 transition duration-200 text-purple-700  font-semibold "> Log out</button>
     </div>
