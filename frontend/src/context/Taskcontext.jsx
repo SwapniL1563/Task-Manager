@@ -4,7 +4,7 @@ import axios from 'axios'
 // creating the context
 export const TaskContext = createContext();
 
-const API_BASE = "https://task-manager-backend-lyt7.onrender.com/";
+const API_BASE = "https://task-manager-backend-lyt7.onrender.com";
 
 
 // create contextprovider

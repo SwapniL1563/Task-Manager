@@ -13,6 +13,7 @@ const Signin = () => {
 
     try {
       const res = await axios.post("/api/auth/signin", form);
+      console.log("LOGIN RESPONSE", res);
       const token = res.data.token;
 
       if (token) {
