@@ -10,6 +10,11 @@ const app = express();
 
 dotenv.config()
 app.use(express.json());
+app.use(cors({
+    origin: 'https://task-manager-frontend-one-ebon.vercel.app/',
+    credentials: true
+}));
+  
 
 connectDb();
 
