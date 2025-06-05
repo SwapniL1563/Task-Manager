@@ -18,7 +18,7 @@ const TaskForm = () => {
   };
 
   const notify = () => {
-      toast("New Task Added!")
+      toast("New Task Added Successfully!")
   }
 
   return (

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import UserStats from '../components/UserStats'
 
 const Dashboard = () => {
-  const navigate= useNavigate();
+  const navigate = useNavigate();
   const [filter, setFilter] = useState('All');
   return (
     <div className="min-h-screen bg-purple-100 flex flex-col  items-center p-6">

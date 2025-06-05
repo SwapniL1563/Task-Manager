@@ -13,12 +13,15 @@ const TaskList = ({filter}) => {
   };
 
   const filteredTasks = task.filter((t) => {
-    if (filter === 'All') return true;
-    if (filter === 'Completed') return t.completed === true;
-    if (filter === 'Incomplete') return t.completed === false;
-    return t.priority === filter;
-  });
+  switch (filter) {
+    case 'All': return true;
+    case 'Completed': return t.completed;
+    case 'Incomplete': return !t.completed;
+    default: return t.priority === filter;
+  }
+});
 
+  
   if (!Array.isArray(task)) {
     return <p>Loading tasks...</p>;
   }

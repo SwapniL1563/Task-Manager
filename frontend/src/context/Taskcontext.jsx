@@ -4,10 +4,10 @@ import axios from 'axios'
 // creating the context
 export const TaskContext = createContext();
 
-const API_BASE = "https://task-manager-backend-lyt7.onrender.com";
+const API_BASE = "https://task-manager-backend-lyt7.onrender.com"; 
 
 
-// create contextprovider
+// create context provider
 export const TaskContextProvider = ({children}) => {
     const [task,setTask] = useState([]);
     const [token,setToken] = useState(localStorage.getItem('token') || '');
@@ -55,7 +55,7 @@ export const TaskContextProvider = ({children}) => {
         setToken('');
     }
     
-    //  fetch task whenever we get jwt token
+    //  fetch task whenever token is set
     useEffect( () => {
       if(token){
         fetchTasks();
