@@ -25,6 +25,11 @@ app.use(cors({
 // connect to db
 connectDb();
 
+// Ping route - to reduce cold start
+app.get('/ping', (req, res) => {
+  res.send('pong');
+});
+
 // api endpoints
 app.use("/api/auth" , userRoutes);
 app.use("/api/task", taskRoutes);
