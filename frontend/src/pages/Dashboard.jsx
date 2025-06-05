@@ -7,6 +7,7 @@ import UserStats from '../components/UserStats'
 const Dashboard = () => {
   const navigate = useNavigate();
   const [filter, setFilter] = useState('All');
+
   return (
     <div className="min-h-screen bg-purple-100 flex flex-col  items-center p-6">
     <div className='flex justify-between gap-4 md:gap-2 md:w-[40%] items-center '>
