@@ -22,7 +22,7 @@ export const signup = async (req,res) => {
     })
 
     // now generate jwt token for the same user
-    const token = await jwt.sign({id:newUser._id},process.env.JWT_SECRET);
+    const token = jwt.sign({id:newUser._id},process.env.JWT_SECRET,{expiresIn:"7d"});
 
     res.json({
         token,
@@ -50,11 +50,11 @@ export const signin = async(req,res) => {
         })
     }
 
-    // now generate token for valid user
-    const token = jwt.sign({id:user.id},process.env.JWT_SECRET);
+    // now generate jwt token for valid user
+    const token = jwt.sign({id:user.id},process.env.JWT_SECRET,{ expiresIn:"7d"});
 
     res.json({
-        token,user:{ email , password ,"msg":"Login Successfully" }
+        token,user:{ email:user.email,user:user.username ,"msg":"Login Successfully" }
         
     })
 }
