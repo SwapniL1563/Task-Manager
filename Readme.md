@@ -27,8 +27,7 @@ A minimal, full-stack Task Manager built with the **MERN** stack. This app allow
 
 ## 🌍 Live Demo
 
-- Frontend: [https://task-manager-frontend-one-ebon.vercel.app/](https://task-manager-frontend-one-ebon.vercel.app/)  
-- Backend: [https://task-manager-backend-lyt7.onrender.com](https://task-manager-backend-lyt7.onrender.com)
+- Live link: [https://task-manager-frontend-one-ebon.vercel.app/](https://task-manager-frontend-one-ebon.vercel.app/)  
 
 ---
 
